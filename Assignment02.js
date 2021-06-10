@@ -1,3 +1,4 @@
+
 /* FOR EACH 
  * This function takes an array of integer and a funcion to print out as arguments
  * Then prints all the elements of the array
