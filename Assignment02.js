@@ -13,18 +13,22 @@ forEach([11, 22, 33, 44, 55], console.log);
 
 // MAP //
 //Array.prototype.myMap = function() {
-function square(number){
+let square = function(number){
     return number * number;
-}
-function myMap(array){
+};
+let myMap = function(array, callBack){
     let newArray = [];
     for(const element of array){
-        newArray.push(square(element));
+        newArray.push(callBack(element));
     }
     return newArray;
-}
+};
+console.log(myMap([11,22, 33, 44, 55, 66], square));
+/* 
+let arr = [11, 22, 33, 44, 55, 66, 77, 88, 99];
+let myMap = arr.map(element => element + element);
 console.log(myMap[11, 22, 33, 44, 55, 66, 77, 88]);
-
+ */
 /* FILTER 
  * This function takes an integer array as an arguement
  * It then returns even numbers
