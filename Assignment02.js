@@ -13,10 +13,17 @@ forEach([11, 22, 33, 44, 55], console.log);
 
 // MAP //
 //Array.prototype.myMap = function() {
+function square(number){
+    return number * number;
+}
 function myMap(array){
-    
-
-};
+    let newArray = [];
+    for(const element of array){
+        newArray.push(square(element));
+    }
+    return newArray;
+}
+console.log(myMap[11, 22, 33, 44, 55, 66, 77, 88]);
 
 /* FILTER 
  * This function takes an integer array as an arguement
