@@ -83,23 +83,46 @@ let reduce = function(array){
 };
 
 // INCLUDES //
-Array.prototype.myIncludes = function() {
-
+// if target is matched with an element in array,
+// return true, fasle otherwise.
+let myIncludes = function(array, target){
+    for(let i = 0; i < array.length; i++){
+        if(target === array[i]){
+            return true;
+        }
+    }
+    return false;
 };
 
 // INDEXOF //
-Array.prototype.myIndexOf = function() {
-
+// if target is matched an element of the array,
+// return the index, return -1 otherwise;
+let myIndexOf = function(array, target){
+    for(let i = 0; i < array.length; i++){
+        if(target === array[i]){
+            return i;
+        }
+    }
+    return -1;
 };
 
 // PUSH //
-Array.prototype.myPush = function() {
-
+//Array.prototype.myPush = function() {
+let myPush = function(array, elementToAdd){
+    array.length = array.length + 1;
+    array[array.length] = anElement;
 };
 
 // LASTINDEXOF //
-Array.prototype.myLastIndexOf = function() {
-
+// Return the last index of the array which is matched with the target.
+let myLastIndexOf = function(array, target){
+    let lastIndex = -1;
+    for(let i = 0; i < array.length; i++){
+        if(target === array[i]){
+            lastIndex = i;
+        }
+    }
+    return lastIndex;
 };
 
 // KEYS //
