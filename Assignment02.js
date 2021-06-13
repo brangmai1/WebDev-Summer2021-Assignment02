@@ -11,9 +11,7 @@ let forEach = function(array, operation){
 forEach([11, 22, 33, 44, 55], console.log);
 
 // MAP //
-let square = function(number){
-    return number * number;
-};
+let square = (number) => number * number;
 let myMap = function(array, callBack){
     let newArray = [];
     for(const element of array){
@@ -27,13 +25,11 @@ console.log(myMap([11,22, 33, 44, 55, 66], square));
  * This function takes an integer array as an arguement
  * It then returns even numbers
  */
-let even = function(number){
-    return number % 2 == 0 ? 1 : 0;
-};
-let myFilter = function(array, even){
+let evenNumber = (number) => number % 2 == 0 ? 1 : 0;
+let myFilter = function(array, evenNumber){
     let newArray = [];
     for(let i = 0; i < array.length; i++){
-        if(even(array[i])){
+        if(evenNumber(array[i])){
             newArray.push(array[i]);
         }
     }
@@ -43,26 +39,23 @@ let myFilter = function(array, even){
 console.log(myFilter([11, 22, 33, 44, 55]));
 
 // SOME //
-// Array.prototype.mySome = function() {
-let  = function(number){
-
-}
-let mySome = function(array, prime){
-    let primes = [];
+// mySome function takes a string array and a testing function
+// The functions take word with three characters, then return the new array with three character words
+let  wordsWithThreeChars = (word) => word.length === 3 ? 1 : 0;
+let mySome = function(array, wordsWithThreeChars){
+    let shortWords = [];
     for(let i = 0; i < array.length; i++){
         if(prime(array[i])){
-            primes.push(array[i]);
+            shortWords.push(array[i]);
         }
     }
-    return primes;
+    return shortWords;
 };
 
 // EVERY //
 // Thiss function checks the numbers in the argument array
 // If one of the numbers in the array is negative, the function return false.
-let checkNumbers = function(number){
-    return number >= 0 ? 1 : 0;
-};
+let checkNumbers = (number) => number >= 0 ? 1 : 0;
 let myEvery = function(array, positiveNumbers){
     for(let i = 0; i < array.length; i++){
         if(!checkNumbers(array[i])){
@@ -107,10 +100,11 @@ let myIndexOf = function(array, target){
 };
 
 // PUSH //
-//Array.prototype.myPush = function() {
+// myPush function takes an array and an element as arguments
+// The element is added to the array
 let myPush = function(array, elementToAdd){
     array.length = array.length + 1;
-    array[array.length] = anElement;
+    array[array.length - 1] = elementToAdd;
 };
 
 // LASTINDEXOF //
